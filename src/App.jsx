@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar';
-import CardWidget from './components/CardWidget/CardWidget';
+import itemListContainer from './components/itemListContainer/itemListContainer';
 
 
 const App = () => {
@@ -8,7 +8,7 @@ const App = () => {
     <>
    
      <Navbar/>
-     <CardWidget/>
+     <itemListContainer greeting ="Bienvenido/a , a Merceria dina!"/>
     </>
 
   )
