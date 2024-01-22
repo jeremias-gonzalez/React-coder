@@ -1,18 +1,19 @@
 import { Link } from 'react-router-dom';
+
 import React from 'react';
-const ItemCard = ({nombre,image,precio}) => {
+const ItemCard = ({id, nombre,image,precio}) => {
   return (
     <div>
         
           <div className=" w-full max-w-sm mx-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-          <a href="#">
+
   <img className="p-8 mx-auto object-contain rounded-t-lg w-64 h-64" src={image} alt={nombre} />
-</a>
+
 
                 <div className="px-5 pb-5">
-                    <a href="#">
+       
                         <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{nombre}</h5>
-                    </a>
+           
                     <div className="flex items-center mt-2.5 mb-5">
                         <div className="flex items-center space-x-1 rtl:space-x-reverse">
                             <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">

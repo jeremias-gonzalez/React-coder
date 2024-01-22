@@ -1,18 +1,16 @@
 import React from 'react'
-import Navbar from '../Navbar/Navbar';
 import Main from '../Main/Main';
-import Footer from '../Footer/Footer';
-import ProductList from '../ProductList/ProductList';
+import ProductListContainer from '../ProductListContainer/ProductListContainer';
 
 
 
 const Home = () => {
   return (
     <div>
-     <Navbar/>
+
      <Main/>
-     <ProductList/>
-     <Footer/> 
+     <ProductListContainer/>
+  
     </div>
   )
 }

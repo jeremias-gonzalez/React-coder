@@ -268,10 +268,10 @@ const Navbar = () => {
                               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                                 <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                               </div>
-                              <a href={item.href} className="mt-6 block font-medium text-gray-900">
+                              <NavLink to='/categori/:idCategoria' href={item.href} className="mt-6 block font-medium text-gray-900">
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
                                 {item.name}
-                              </a>
+                              </NavLink>
                               <p aria-hidden="true" className="mt-1">
                                 Shop now
                               </p>
@@ -290,9 +290,9 @@ const Navbar = () => {
                             >
                               {section.items.map((item) => (
                                 <li key={item.name} className="flow-root">
-                                  <a href={item.href} className="-m-2 block p-2 text-gray-500">
+                                  <NavLink to='/categoria/${idCategoria' className="-m-2 block p-2 text-gray-500">
                                     {item.name}
-                                  </a>
+                                  </NavLink>
                                 </li>
                               ))}
                             </ul>
@@ -306,9 +306,9 @@ const Navbar = () => {
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
-                      <a href={page.href} className="-m-2 block p-2 font-medium text-gray-900">
+                      <Link to="./cateogoria" className="-m-2 block p-2 font-medium text-gray-900">
                         {page.name}
-                      </a>
+                      </Link>
                     </div>
                   ))}
                 </div>
@@ -334,9 +334,9 @@ const Navbar = () => {
       </Transition.Root>
 
       <header className="relative bg-white">
-        <p className="flex h-10 items-center justify-center bg-red-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
+        <div className="flex h-10 items-center justify-center bg-red-600 px-4 text-sm font-medium text-white sm:px-6 lg:px-8">
          <SliderAuto/>
-        </p>
+        </div>
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="border-b border-gray-200">
@@ -355,7 +355,7 @@ const Navbar = () => {
               <div className="ml-4 flex lg:ml-0">
                 <a href="#">
                   <span className="sr-only">Categorias</span>
-                <Link to="/home">
+                <Link to="/">
                 <Logo/>
                 </Link>
                 </a>
@@ -430,6 +430,7 @@ const Navbar = () => {
                                           >
                                             {section.items.map((item) => (
                                               <li key={item.name} className="flex">
+                                                
                                                 <a href={item.href} className="hover:text-gray-800">
                                                   {item.name}
                                                 </a>
@@ -450,13 +451,13 @@ const Navbar = () => {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <a
+                    <Link to="./categoria/2"
                       key={page.name}
                       href={page.href}
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
                     >
                       {page.name}
-                    </a>
+                    </Link>
                   ))}
                 </div>
               </Popover.Group>

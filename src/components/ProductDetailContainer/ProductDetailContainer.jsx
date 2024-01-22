@@ -10,10 +10,15 @@ const ProductDetailContainer = () => {
     const {idItem} = useParams();
 
     useEffect( () => {
-        getUnProducto(idItem)
-            .then(res => setProducto(res))
-    }, [idItem])
-
+      getUnProducto(idItem)
+      .then(res => {
+          console.log("Datos del producto:", res);
+          setProducto(res);
+      })
+      .catch(error => {
+          console.error("Error al obtener el producto:", error);
+      });
+}, [idItem]);
   return (
     <div>
         <ProductDetail  {...producto} />

@@ -9,7 +9,7 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
       <ol role="list" className="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8">
         <li>
           <div className="flex items-center">
-            <a href="#" className="mr-2 text-sm font-medium text-gray-900">Men</a>
+            <a href="#" className="mr-2 text-sm font-medium text-gray-900">{nombre}</a>
             <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true" className="h-5 w-4 text-gray-300">
               <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
             </svg>
@@ -17,7 +17,7 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
         </li>
         <li>
           <div className="flex items-center">
-            <a href="#" className="mr-2 text-sm font-medium text-gray-900">Clothing</a>
+            <a href="#" className="mr-2 text-sm font-medium text-gray-900">{id}</a>
             <svg width="16" height="20" viewBox="0 0 16 20" fill="currentColor" aria-hidden="true" className="h-5 w-4 text-gray-300">
               <path d="M5.697 4.34L8.98 16.532h1.327L7.025 4.341H5.697z" />
             </svg>
@@ -85,7 +85,7 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
           </div>
         </div> */}
 
-        {/* <form className="mt-10">
+         <form className="mt-10">
       
           <div>
             <h3 className="text-sm font-medium text-gray-900">Color</h3>
@@ -187,8 +187,8 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
             </fieldset>
           </div>
 
-          <button type="submit" className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
-        </form> */}
+          <button type="submit" className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Add to bag</button>
+        </form> 
       </div> 
 
       <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
@@ -201,7 +201,7 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
           </div>
         </div>
 
-        {/* <div className="mt-10">
+         <div className="mt-10">
           <h3 className="text-sm font-medium text-gray-900">Highlights</h3>
 
           <div className="mt-4">
@@ -212,15 +212,8 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
               <li className="text-gray-400"><span className="text-gray-600">Ultra-soft 100% cotton</span></li>
             </ul>
           </div>
-        </div> */}
+        </div> 
 
-        {/* <div className="mt-10">
-          <h2 className="text-sm font-medium text-gray-900">Details</h2>
-
-          <div className="mt-4 space-y-6">
-            <p className="text-sm text-gray-600">The 6-Pack includes two black, two white, and two heather gray Basic Tees. Sign up for our subscription service and be the first to get new, exciting colors, like our upcoming &quot;Charcoal Gray&quot; limited release.</p>
-          </div>
-        </div> */}
       </div>
     </div>
   </div>

@@ -6,7 +6,7 @@ const productos = [
             nombre : 'Medias Cocot 3/4 Lycra Pantalon Puntera Art.85',
             precio : '99',
             descripcion : '',
-            idCat:"1"
+            idCat:"2"
         },
         {   id:'2',
             image :"https://eyelit.com.ar/cdn/shop/products/4654P0A.56.1.jpg?v=1673361452&width=600",
@@ -28,7 +28,7 @@ const productos = [
             nombre : 'Sombrero Panama Solero Playero Verano Simil Paja Paperstraw',
             precio:'110',
             descripcion: '',
-            idCat:"1"
+            idCat:"2"
          }  , 
          {
            id:'5',
@@ -36,7 +36,7 @@ const productos = [
            nombre : 'Medias Panty Bucaneras Portaligas De Lycra Abiertas Art 401',
            precio : '85',
            descripcion: '',
-           idCat:"1"
+           idCat:"2"
          },
          {
             id:'6',
@@ -44,7 +44,7 @@ const productos = [
             nombre : 'Calzoncillo Boxer Nene Algodon Kids Fourca Andros',
             precio : '65',
             descripcion: '',
-            idCat:"3"
+            idCat:"2"
          }
         ]
         export const getProductos = () => {
