@@ -9,6 +9,7 @@ const Home = () => {
     <div>
 
      <Main/>
+
      <ProductListContainer/>
   
     </div>

@@ -28,7 +28,7 @@ export default function Contact() {
           number: number,
       };
 
-      emailjs.send("service_9e6f3wn", "template_ll7dj4o", templateParams, "X8yFIvDIkcl0XbVSo")
+      emailjs.send("service_9e6f3wn", "template_ll7dj4o", templateParams, "Oz3D4szp4tzSiS95h")
           .then(respuesta => {
               console.log("Mensaje enviado", respuesta)
           })

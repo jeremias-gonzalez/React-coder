@@ -268,7 +268,7 @@ const Navbar = () => {
                               <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-100 group-hover:opacity-75">
                                 <img src={item.imageSrc} alt={item.imageAlt} className="object-cover object-center" />
                               </div>
-                              <NavLink to='/categori/:idCategoria' href={item.href} className="mt-6 block font-medium text-gray-900">
+                              <NavLink to='/categoria/:idCategoria' href={item.href} className="mt-6 block font-medium text-gray-900">
                                 <span className="absolute inset-0 z-10" aria-hidden="true" />
                                 {item.name}
                               </NavLink>
@@ -306,9 +306,9 @@ const Navbar = () => {
                 <div className="space-y-6 border-t border-gray-200 px-4 py-6">
                   {navigation.pages.map((page) => (
                     <div key={page.name} className="flow-root">
-                      <Link to="./cateogoria" className="-m-2 block p-2 font-medium text-gray-900">
+                      <NavLink to="/productos" className="-m-2 block p-2 font-medium text-gray-900">
                         {page.name}
-                      </Link>
+                      </NavLink>
                     </div>
                   ))}
                 </div>
@@ -451,7 +451,7 @@ const Navbar = () => {
                   ))}
 
                   {navigation.pages.map((page) => (
-                    <Link to="./categoria/2"
+                    <Link to="./productos"
                       key={page.name}
                       href={page.href}
                       className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"

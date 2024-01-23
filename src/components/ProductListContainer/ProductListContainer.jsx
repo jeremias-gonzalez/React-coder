@@ -26,8 +26,7 @@ const ProductListContainer = () => {
 
   return (
 
-    <div className='my-10 m-auto'>
-  
+    <div className='m-44 '>
      <ProductList productos={productos}/>
 
     </div>

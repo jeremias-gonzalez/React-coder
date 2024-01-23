@@ -6,6 +6,7 @@ import ProductListContainer from './components/ProductListContainer/ProductListC
 import ProductDetailContainer from './components/ProductDetailContainer/ProductDetailContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer/Footer';
+import ProductsSection from './components/ProductsSection/ProductsSection';
 
 const App = () => {
   return (
@@ -14,8 +15,9 @@ const App = () => {
      <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
-          <Route path="/contacto" element={<Contact />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/categoria/:idCategoria" element={<ProductListContainer />} />
+          <Route path="/productos" element={<ProductsSection />} />
           <Route path="/item/:idItem" element={<ProductDetailContainer />} />
           
         </Routes>

@@ -8,7 +8,8 @@ export default {
     extend: {},
   },
   plugins: [
-    require('flowbite/plugin','@tailwindcss/aspect-ratio')
+    require('flowbite/plugin','@tailwindcss/aspect-ratio',
+    ('@tailwindcss/forms'))
   ],
 }
 
