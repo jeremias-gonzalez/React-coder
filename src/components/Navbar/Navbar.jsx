@@ -32,38 +32,38 @@ const Navbar = () => {
               id: 'clothing',
               name: 'Clothing',
               items: [
-                { name: 'Tops', href: '#' },
-                { name: 'Dresses', href: '#' },
-                { name: 'Pants', href: '#' },
-                { name: 'Denim', href: '#' },
-                { name: 'Sweaters', href: '#' },
-                { name: 'T-Shirts', href: '#' },
-                { name: 'Jackets', href: '#' },
-                { name: 'Activewear', href: '#' },
-                { name: 'Browse All', href: '#' },
+                { name: 'Tops', href: '/productos' },
+                { name: 'Dresses', href: '/productos' },
+                { name: 'Pants', href: '/productos' },
+                { name: 'Denim', href: '/productos'},
+                { name: 'Sweaters', href: '/productos' },
+                { name: 'T-Shirts', href: '/productos' },
+                { name: 'Jackets', href: '/productos' },
+                { name: 'Activewear', href: '/productos' },
+                { name: 'Browse All', href: '/productos' },
               ],
             },
             {
               id: 'accessories',
               name: 'Accessories',
               items: [
-                { name: 'Watches', href: '#' },
-                { name: 'Wallets', href: '#' },
-                { name: 'Bags', href: '#' },
-                { name: 'Sunglasses', href: '#' },
-                { name: 'Hats', href: '#' },
-                { name: 'Belts', href: '#' },
+                { name: 'Watches', href: '/productos' },
+                { name: 'Wallets', href: '/productos' },
+                { name: 'Bags', href: '/productos' },
+                { name: 'Sunglasses', href: '/productos' },
+                { name: 'Hats', href: '/productos' },
+                { name: 'Belts', href: '/productos' },
               ],
             },
             {
               id: 'brands',
               name: 'Brands',
               items: [
-                { name: 'Full Nelson', href: '#' },
-                { name: 'My Way', href: '#' },
-                { name: 'Re-Arranged', href: '#' },
-                { name: 'Counterfeit', href: '#' },
-                { name: 'Significant Other', href: '#' },
+                { name: 'Full Nelson', href: '/productos' },
+                { name: 'My Way', href: '/productos' },
+                { name: 'Re-Arranged', href: '/productos' },
+                { name: 'Counterfeit', href: '/productos' },
+                { name: 'Significant Other', href: '/productos' },
               ],
             },
           ],
@@ -90,38 +90,38 @@ const Navbar = () => {
               id: 'Women',
               name: 'Women',
               items: [
-                { name: 'Tops', href: '#' },
-                { name: 'Dresses', href: '#' },
-                { name: 'Pants', href: '#' },
-                { name: 'Denim', href: '#' },
-                { name: 'Sweaters', href: '#' },
-                { name: 'T-Shirts', href: '#' },
-                { name: 'Jackets', href: '#' },
-                { name: 'Activewear', href: '#' },
-                { name: 'Browse All', href: '#' },
+                { name: 'Tops', href: '/categoria/1' },
+                { name: 'Dresses', href: '/categoria/1' },
+                { name: 'Pants', href: '/categoria/1' },
+                { name: 'Denim', href: '/categoria/1' },
+                { name: 'Sweaters', href: '/categoria/1' },
+                { name: 'T-Shirts', href: '/categoria/1' },
+                { name: 'Jackets', href: '/categoria/1' },
+                { name: 'Activewear', href: '/categoria/1' },
+                { name: 'Browse All', href: '/categoria/1' },
               ],
             },
             {
               id: 'Mens',
               name: 'Mens',
               items: [
-                { name: 'Watches', href: '#' },
-                { name: 'Wallets', href: '#' },
-                { name: 'Bags', href: '#' },
-                { name: 'Sunglasses', href: '#' },
-                { name: 'Hats', href: '#' },
-                { name: 'Belts', href: '#' },
+                { name: 'Watches', href: '/categoria/2' },
+                { name: 'Wallets', href: '/categoria/2' },
+                { name: 'Bags', href: '/categoria/2' },
+                { name: 'Sunglasses', href: '/categoria/2' },
+                { name: 'Hats', href: '/categoria/2' },
+                { name: 'Belts', href: '/categoria/2' },
               ],
             },
             {
               id: 'Kids',
               name: 'Kids',
               items: [
-                { name: 'Full Nelson', href: '#' },
-                { name: 'My Way', href: '#' },
-                { name: 'Re-Arranged', href: '#' },
-                { name: 'Counterfeit', href: '#' },
-                { name: 'Significant Other', href: '#' },
+                { name: 'Full Nelson', href: '/categoria/3' },
+                { name: 'My Way', href: '/categoria/3' },
+                { name: 'Re-Arranged', href: '/categoria/3' },
+                { name: 'Counterfeit', href: '/categoria/3' },
+                { name: 'Significant Other', href: '/categoria/3' },
               ],
             },
           ],
@@ -184,8 +184,12 @@ const Navbar = () => {
         // },
       ],
       pages: [
-        { name: 'Productos', href: '#' },
-        { name: 'Contact', href: '#' },
+        { name: 'Productos', href: '/productos' },
+    
+      ],
+      page2: [
+     
+        { name: 'Contact', href: '/contact' },
       ],
     }
     
@@ -459,7 +463,18 @@ const Navbar = () => {
                       {page.name}
                     </Link>
                   ))}
+                   {navigation.page2.map((page2) => (
+                    <Link to="./contact"
+                      key={page2.name}
+                      href={page2.href}
+                      className="flex items-center text-sm font-medium text-gray-700 hover:text-gray-800"
+                    >
+                      {page2.name}
+                    </Link>
+                  ))}
                 </div>
+              
+               
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
@@ -485,14 +500,14 @@ const Navbar = () => {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <a href="#" className="group -m-2 flex items-center p-2">
+                  <Link to='/cart' className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                       aria-hidden="true"
                     />
                     <span className="ml-2 text-sm font-medium text-gray-700 group-hover:text-gray-800">0</span>
                     <span className="sr-only">items in cart, view bag</span>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

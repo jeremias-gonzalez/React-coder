@@ -1,6 +1,36 @@
-import React from 'react'
+import { useState } from 'react';
+import ProductCount from '../ProductCount/ProductCount';
+import { Link } from 'react-router-dom';
 
-const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
+//Importamos el CarritoContext: 
+import { CarritoContext } from "../../context/CarritoContex";
+
+//Importo el Hook useContext: 
+import { useContext } from 'react';
+
+const ProductDetail = ({ id, nombre, stock, precio, image , descripcion }) => {
+  //Creamos  un estado local con la cantidad de productos agregados. 
+  const [agregarCantidad, setAgregarCantidad] = useState(0);
+
+  ////clase 11 - Context
+
+  const {agregarAlCarrito} = useContext(CarritoContext);
+
+
+  ///////////////////////////////////////////////////////////
+  //Creamos una función manejadora de la cantidad
+
+  const manejadorCantidad =  (cantidad) => {
+    setAgregarCantidad(cantidad);
+    //console.log("Productos agregados: " + cantidad);
+
+    //Ahora voy a crear un objeto con el item y la cantidad
+    const item = {id, nombre, precio};
+    agregarAlCarrito(item, cantidad);
+  }
+
+
+
   return (
     <div>
         <div className="bg-white">
@@ -186,9 +216,13 @@ const ProductDetail = ({id,nombre,precio ,image , descripcion}) => {
               </div>
             </fieldset>
           </div>
-
-          <button type="submit" className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">Add to bag</button>
+  
+           
         </form> 
+        {
+              agregarCantidad > 0 ? (<Link to="/cart" className="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-red-600 px-8 py-3 text-base font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"> Terminar compra</Link>) : (<ProductCount incial = {1} stock = {stock} funcionAgregar = {manejadorCantidad} />)
+            }
+
       </div> 
 
       <div className="py-10 lg:col-span-2 lg:col-start-1 lg:border-r lg:border-gray-200 lg:pb-16 lg:pr-8 lg:pt-6">
