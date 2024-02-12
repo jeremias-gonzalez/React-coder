@@ -10,6 +10,7 @@ import ProductsSection from './components/ProductsSection/ProductsSection';
  import {CarritoProvider} from './context/CarritoContex'
  
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 
 
@@ -27,6 +28,7 @@ const App = () => {
           <Route path="/categoria/:idCategoria" element={<ProductListContainer />} />
           <Route path="/productos" element={<ProductsSection />} />
           <Route path='/cart' element = {<Cart/>} />
+          <Route path='/checkout' element = {<Checkout/>}/>
           <Route path="/item/:idItem" element={<ProductDetailContainer />} />
           
         </Routes>
